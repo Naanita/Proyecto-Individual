@@ -1,0 +1,26 @@
+
+.searchTerm{
+    text-align: center;
+    width: 60%;
+    border-right: none;
+    height: 30px;
+    outline: none;
+    border-radius: 5px ;
+     border: 1px solid var(--color);
+    color: #d8fd00;
+}
+
+.searchTerm:focus{
+    color: #131313;
+}
+
+.SearchButton{
+    width: 40px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius:  5px ;
+    border: 1px solid var(--color);
+    cursor: pointer;
+    border-left: none;
+
+}

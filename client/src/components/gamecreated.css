@@ -1,0 +1,278 @@
+.color{
+    background-image: url("../sourceimage/giphy\ \(1\).gif");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.ButtonGameCrated{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ButtonGameCrated{
+padding: 20px 60px; letter-spacing: 3px;
+background: rgb(15, 20, 0)
+var(--color); font-weight: bold;
+border-radius: 5px; border: 1px solid #2e1733;
+transition: 0.3s;
+
+}
+
+.ButtonGameCrated:hover{
+    background-color: #aa8caf;
+    color: #000;
+    box-shadow: 0 0 5px #aa8caf,
+    0 0 25px #aa8caf,
+    0 0 50px #aa8caf;
+
+}
+.TextCreated{
+
+    font-family: "Arial";
+    font-size: 4em;
+    font-weight: 500;
+    color: #2e1733;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 1s;
+    margin-bottom: 80px;
+    }
+    .TextCreated:hover{
+        color: #e9d3ff;
+        text-shadow: 0 0 5px #8e6995,
+        0 0 25px #8e6995,
+        0 0 50px #8e6995,
+        0 0 100px #aa8caf;
+    }
+
+.textbox{
+    position: relative;
+    margin: 10px;
+}
+.textbox input {
+    width: 280px;
+    height: 50px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #df2666;
+    padding: 0 20px 0 56px;
+    font-size: 17px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255 / 96%);
+    outline: none;
+
+}
+.textbox input:focus ~ .icon{
+    opacity: 1;
+}
+.textbox input::placeholder{
+    color: #2e1733;
+}
+
+.textbox input:valid{
+    border-color: aqua;
+}
+.textbox .asterix{
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    font-size: 22px;
+    pointer-events: none;
+    color: #df2666;
+}
+
+.textbox .icon{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -12px;
+    opacity: 0.5;
+}
+.textbox :is(input:valid)
+ ~ .asterix{
+    opacity: 0;
+}
+
+@keyframes shake{
+    0%, 100%{
+        translate: 0;
+    }
+    25%{
+        translate: 8px 0;
+    }
+    75%{
+        translate: -8px 0;
+    }
+}
+
+.textbox input:valid,
+.textbox input:valid
+~ :is(.asterix, .icon){
+    animation: none;
+}
+
+.textbox
+:is(input, .icon, .asterix) {
+animation: 
+shake 0.1635s 0s 3;
+}
+
+.error{
+font-family:'Courier New';
+font-weight: bold;
+}
+
+.textboxReleased{
+
+        position: relative;
+        margin: 10px;
+    }
+
+    .textboxReleased input {
+        width: 280px;
+        height: 50px;
+
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #df2666;
+        padding: 0 20px 0 56px;
+        font-size: 17px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255 / 96%);
+        outline: none;
+    
+    }
+    .textboxReleased input:focus ~ .icon{
+        opacity: 1;
+    }
+    .textboxReleased input::placeholder{
+        color: #2e1733;
+    }
+    
+    .textboxReleased input:valid{
+        border-color: aqua;
+    }
+    .textboxReleased .asterix{
+        position: absolute;
+        top: 21px;
+        right: 20px;
+        font-size: 22px;
+        pointer-events: none;
+        color: #df2666;
+    }
+    
+    .textboxReleased .icon{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -12px;
+        opacity: 0.5;
+    }
+    .textboxReleased :is(input:valid)
+     ~ .asterix{
+        opacity: 0;
+    }
+    .textboxReleased input:valid,
+    .textboxReleased input:valid
+    ~ :is(.asterix, .icon){
+        animation: none;
+    }
+    
+    .textboxReleased
+    :is(input, .icon, .asterix) {
+    animation: 
+    shake 0.1635s 0s 3;
+    }
+
+    .textboxRating{
+
+        position: relative;
+        margin: 10px;
+    }
+
+    .textboxRating input {
+        width: 280px;
+        height: 50px;
+        border-radius: 5px;
+        background: transparent;
+        border: 1px solid #df2666;
+        padding: 0 20px 0 56px;
+        font-size: 17px;
+        font-family: "Roboto";
+        color: rgb(255, 255, 255 / 96%);
+        outline: none;
+    
+    }
+    .textboxRating input:focus ~ .icon{
+        opacity: 1;
+    }
+    .textboxRating input::placeholder{
+        color: #2e1733;
+    }
+    
+    .textboxRating input:valid{
+        border-color: aqua;
+    }
+    .textboxRating .asterix{
+        position: absolute;
+        top: 21px;
+        right: 20px;
+        font-size: 22px;
+        pointer-events: none;
+        color: #df2666;
+    }
+    
+    .textboxRating .icon{
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        margin-top: -12px;
+        opacity: 0.5;
+    }
+    .textboxRating :is(input:valid)
+     ~ .asterix{
+        opacity: 0;
+    }
+    .textboxRating input:valid,
+    .textboxRating input:valid
+    ~ :is(.asterix, .icon){
+        animation: none;
+    }
+    
+    .textboxRating
+    :is(input, .icon, .asterix) {
+    animation: 
+    shake 0.1635s 0s 3;
+    }
+
+    .selectCreated {
+        background: transparent;
+        cursor: pointer;
+        text-align: center;
+        outline: none;
+    margin: 8px;
+        height: 1.5rem;
+        width: 8rem;
+    font-weight: bold;
+        border-radius: 0.3rem;
+        color: #131313;
+    border-color: #df2666;
+        
+        
+    }
+
+    .selectCreated:hover{
+        background-color: #aa8caf;
+        color: #131313;
+        box-shadow: 0 0 5px #aa8caf,
+        0 0 25px #aa8caf,
+        0 0 50px #aa8caf;
+        border-color: #aa8caf;
+    }

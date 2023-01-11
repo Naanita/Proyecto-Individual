@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+
+    font-family: "Roboto";
+
+  }
+  
+  .containerc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 30px;
+    max-width: 1366px;
+  }
+  
+  .card {
+    flex: 300px;
+    background-color: #60fd00;
+    border-radius: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .containerc {
+      padding: 30px;
+    }
+  }
+  
+  .card img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .card .description {
+    padding: 16px 24px;
+  }
+  
+  .card .title {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  
+  .card .release-date,
+  .card .vote-average {
+    margin: 0;
+    color: #131313;
+  }

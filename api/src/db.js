@@ -30,17 +30,38 @@ modelDefiners.forEach((model) => model(sequelize));
 // Capitalizamos los nombres de los modelos ie: product => Product
 let entries = Object.entries(sequelize.models);
 let capsEntries = entries.map((entry) => [
-  entry[0][0].toUpperCase() + entry[0].slice(1),
-  entry[1],
-]);
+  entry[0][0].toUpperCase() + entry[0].slice(1), //devuvle el valor en mayusculas
+  entry[1], //acá ya estan nuestras tablas
+]); 
 sequelize.models = Object.fromEntries(capsEntries);
-
+ 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Videogame, Genre } = sequelize.models;
+const { Videogame, Genre, Platform } = sequelize.models; //destructuración de las tablas 
 
-Genre.belongsToMany(Videogame, { through: "Genre_videogames" });
-Videogame.belongsToMany(Genre, { through: "Genre_videogames" });
+// Aca vendrian las relaciones
+
+
+Videogame.belongsToMany(Genre, { //relacion de muchos a muchos
+
+//creación de tablas intermedias
+  through: "genre_videogame",
+
+  //VIDEOGAMES ______ GENRE-VIDEOGAMES ___________GENRE
+    //    1              1 - 3                       3
+});
+
+Genre.belongsToMany(Videogame, {
+  through: "genre_videogame",
+});
+
+Videogame.belongsToMany(Platform, {
+  through: "platform_videogame",
+});
+
+Platform.belongsToMany(Videogame, {
+  through: "platform_videogame",
+});
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 

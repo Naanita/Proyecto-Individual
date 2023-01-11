@@ -1,0 +1,136 @@
+
+.All{
+    background-image: url("../sourceimage/giphy\ \(2\).gif");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 62.5%
+
+}
+
+.ButtonGameD{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ButtonGameD{
+padding: 20px 60px; letter-spacing: 3px;
+background: rgb(15, 20, 0)
+var(--color); font-weight: bold;
+border-radius: 5px; border: 1px solid cyan;
+transition: 0.3s;
+
+}
+
+.ButtonGameD:hover{
+    background-color: cyan;
+    color: #000;
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,
+    0 0 50px cyan;
+
+}
+.Card {
+    background-color: #fff;
+    box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .025);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.card__publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.card__publication img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s;
+}
+
+.Card:hover .card__publication img {
+    transform: scale(1.5);
+}
+
+.card__publication>div {
+    background: linear-gradient(to right bottom,
+            rgba(245, 0, 175, 0.8), rgba(0, 191, 255, 0.8));
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+}
+
+.card__publication i {
+    margin-right: 1rem;
+}
+
+.card__publication span {
+    display: block;
+}
+
+.card__author {
+    margin-bottom: .5rem;
+}
+
+.card__info {
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+.card__title {
+    font-size: 3rem;
+}
+
+
+.card__cta {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff7730;
+    margin-top: 2rem;
+}
+
+.card__cta span {
+    display: inherit;
+    transition: transform .5s;
+}
+
+.card__cta:hover span {
+    transform: translateX(.5rem);
+}
+
+@media screen and (min-width: 37.5em) {
+    .Card {
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 75rem;
+    }
+
+    .card__publication {
+        width: 25rem;
+        height: initial;
+    }
+}
+
+.txt{
+    font-family: "Roboto";
+    font-size: 12px;
+    padding-right: 150px;
+
+}
+
+.p{
+    margin: 5px;
+}

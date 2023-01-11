@@ -8,28 +8,22 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   try {
+    // si ya los tengo cargados en la DB los consumo desde alli.
+    const genresDb = await Genre.findAll();
+    if (genresDb.length) return res.json(genresDb);
 
-    const genresApi = await axios.get(`https://api.rawg.io/api/genres?key=${APIKEY}`
+    //de lo contrario ------>
+    const genresApi = await axios.get(
+      `https://api.rawg.io/api/genres?key=${APIKEY}`
     );
     const nameGenres = genresApi.data.results;
-
-
-
-
-
-    nameGenres.forEach(async (Ge) => {
-      await Genre.findOrCreate({
-        where: {
-          name: Ge.name,
-        }
-
-
-
-      });
+    const genres = nameGenres.map((gen) => {
+      return {
+        id: gen.id,
+        name: gen.name,
+      };
     });
-    const allGenres = await Genre.findAll();
-    res.send(allGenres);
-
+    res.json(genres);
     // axios
     //   .get(`https://api.rawg.io/api/genres?key=${APIKEY}`)
     //   .then((response) => {

@@ -1,14 +1,12 @@
 const { Router } = require("express");
 const genreR = require("./genre");
 const videogameR = require("./videogame");
-
+const platformsR = require("./plataform")
 const router = Router();
 
-router.use("/genre", genreR); //middelware quiere decir que en la ruta /gender use genderRoute
+router.use("/genre", genreR); //middelware quiere decir que en la ruta /gender use genderR
 router.use("/videogame", videogameR);
+router.use("/platforms", platformsR);
 
-//router.get('/', (req, res, next)=> {
-//    res.send('Soy el get de /Videogame')
-//  });
 
 module.exports = router;
