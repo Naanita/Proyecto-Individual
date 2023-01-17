@@ -8,7 +8,7 @@ export default function Loader() {
     
             <div class="title">
                 <span class="block"></span>
-                <h1>Please, wait<span></span></h1>
+                <h1>Please wait<span></span></h1>
             </div>
     
             <div class="role">
