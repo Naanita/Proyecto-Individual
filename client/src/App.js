@@ -5,11 +5,13 @@ import Landingpage from "./components/landingpage"
 import Home  from "./components/home";
 import Gamecreated from "./components/Gamecreated"
 import Details from "./components/Detail";
+import axios from 'axios';
+axios.defaults.baseURL= 'http://localhost:3001/';
+
 
 function App() {
   return (
     <BrowserRouter>
-      {" "}
       <div className="App">
         {/* el Switch hace un ruteo segun las routes que tengamos */}
         <Switch>

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export function getVideogames(){
     return async function(dispatch){
-        var games = await axios.get('http://localhost:3001/videogame')
+        var games = await axios.get("/videogame")
             
             return dispatch({
             type: 'GET_VIDEOGAMES',
@@ -23,7 +23,7 @@ export function getVideogames(){
 export function getVideogameName(name) {
     return async function(dispatch) {
     try {
-        var gameN = await axios.get('http://localhost:3001/videogame?gName=' + name);
+        var gameN = await axios.get('videogame?gName=' + name);
 
         return dispatch ({
             type: 'GET_VIDEOGAME_NAME',
@@ -38,7 +38,7 @@ export function getVideogameName(name) {
 
 export function getGenres(){
     return async function(dispatch){
-        var json = await axios.get('http://localhost:3001/genre/'); 
+        var json = await axios.get('genre/'); 
 
         return dispatch({
             type:'GET_GENRES',
@@ -49,7 +49,7 @@ export function getGenres(){
 
 export function getPlatforms() {
     return async function(dispatch) {
-        const info = await axios.get('http://localhost:3001/platforms');
+        const info = await axios.get('platforms');
         dispatch({
             type: 'GET_PLATFORMS',
             payload: info.data
@@ -62,7 +62,7 @@ export function getDetails(id) {
     if (id) { 
         return async function (dispatch) {
             try {
-                const details = await axios.get(`http://localhost:3001/videogame/${id}`)
+                const details = await axios.get(`videogame/${id}`)
                 dispatch ({
                     type: 'GET_DETAILS',
                     payload: details.data
@@ -79,7 +79,7 @@ export function getDetails(id) {
 
 export function postVideogame(payload) {
     return async function (dispatch) {
-        const response = await axios.post('http://localhost:3001/videogame', payload);
+        const response = await axios.post('videogame', payload);
         
            
         return response;
