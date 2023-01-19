@@ -6,7 +6,7 @@ import Home  from "./components/home";
 import Gamecreated from "./components/Gamecreated"
 import Details from "./components/Detail";
 import axios from 'axios';
-axios.defaults.baseURL= 'proyecto-individual-production-47f5.up.railway.app';
+axios.defaults.baseURL= 'apiGames.up.railway.app';
 
 
 function App() {

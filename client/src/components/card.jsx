@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./card.css";
 export default function Card({ name, image, genres, id, rating, released }) { // traigo lo unico que necesito, aunque tambien puedo hacer un props y traer la info para renderizarlo con un props.info
-console.log(released);
   let genre = genres.map((e) => e.name); //mapeo, porque me trae objetos y necesito acceder al name unicamente
   return (
     <div className="card">

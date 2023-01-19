@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export function getVideogames(){
     return async function(dispatch){
-        var games = await axios.get("/videogame")
+        var games = await axios.get("videogame")
             
             return dispatch({
             type: 'GET_VIDEOGAMES',
@@ -38,7 +38,7 @@ export function getVideogameName(name) {
 
 export function getGenres(){
     return async function(dispatch){
-        var json = await axios.get('genre/'); 
+        var json = await axios.get('genre'); 
 
         return dispatch({
             type:'GET_GENRES',
